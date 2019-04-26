@@ -1,0 +1,26 @@
+test/
+node_modules/
+package.json/
+
+
+# dependencies
+Audiolib/node_modules
+Audiolib/.pnp
+Audiolib/.pnp.js
+
+# testing
+Audiolib/coverage
+
+# production
+Audiolib/build
+
+# misc
+Audiolib/.DS_Store
+Audiolib/.env.local
+Audiolib/.env.development.local
+Audiolib/.env.test.local
+Audiolib/.env.production.local
+
+Audiolib/npm-debug.log*
+Audiolib/yarn-debug.log*
+Audiolib/yarn-error.log*
