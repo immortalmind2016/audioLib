@@ -1,3 +1,3 @@
 module.exports={
-     path:__dirname+"/Audiolib/build/"
+     path:__dirname+"/Audiolib/public/"
 }

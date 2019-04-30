@@ -7,6 +7,7 @@ const config=require("./config")
 const bodyParser=require("body-parser")
 const Database=require("./config/database");
 const mongoose=require("mongoose")
+const Analysis=require("./models/Analysis")
 mongoose.connect("mongodb://immortalmind:0115120323m@ds145346.mlab.com:45346/audiolib")
 const app=express();
 
@@ -44,6 +45,7 @@ app.use("/api/dashboard",dashboard);
 app.use("/api/index",index);
 app.use("/api/user",user)
 app.use("*",(req,res,err)=>{
+  Analysis.findOneAndUpdate({id:1},{$inc:{"users":1}})
   res.sendFile(config.path+"index.html")
 })
 app.listen(8000,()=>{

@@ -4,7 +4,11 @@ var Analysis=new schema({
 
 users:Number,
 blind:Number,
-voice_play:Number
+voice_play:Number,
+id:{
+    type:Number,
+    unique:true
+}
 
 
 })

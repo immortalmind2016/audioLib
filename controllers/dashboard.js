@@ -86,12 +86,35 @@ const editBook=(req,res,err)=>{
  })
 }
 
+const getAnalysis=(req,res,err)=>{
+    Book.count({},(err,count)=>{
+            Analysis.findOne({id:1},(err,analysis)=>{
+                Message.count({},(err,count2)=>{
+     res.json({...analysis,books:count,requests:count2})
+                })
+           
+            })
+    })
+
+}
+const setup=(req,res,err)=>{
+new Analysis({
+    id:1
+}).save(()=>{
+    res.send("DONE")
+})
+}
+
+
+
 module.exports={
   uploadBook,
   getBook,
   deleteBook,
   getAllBooks,
-  editBook
+  editBook,
+  getAnalysis,
+  setup
   
     
 
