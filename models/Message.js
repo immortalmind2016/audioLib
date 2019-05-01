@@ -5,7 +5,8 @@ var Message=new schema({
 text:String,
 email:String,
 name:String,
-phone:String
+phone:String,
+title:String
 
 
 })

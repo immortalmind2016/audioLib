@@ -18,7 +18,7 @@ app.use(express.static(config.path))
 app.use(function(req, res, next) {
 
      res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "POST, GET");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET,DELETE");
     res.setHeader("Access-Control-Max-Age", "3600");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
  /*
@@ -42,7 +42,7 @@ app.use(function(req, res, next) {
 
 app.use("/api/dashboard",dashboard);
 
-app.use("/api/index",index);
+app.use("/api/",index);
 app.use("/api/user",user)
 app.use("*",(req,res,err)=>{
   Analysis.findOneAndUpdate({id:1},{$inc:{"users":1}})
