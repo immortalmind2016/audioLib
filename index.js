@@ -8,7 +8,7 @@ const bodyParser=require("body-parser")
 const Database=require("./config/database");
 const mongoose=require("mongoose")
 const Analysis=require("./models/Analysis")
-mongoose.connect("mongodb://immortalmind:0115120323m@ds145346.mlab.com:45346/audiolib")
+mongoose.connect(config.db)
 const app=express();
 
 app.use(express.json({limit: '50mb'}));
