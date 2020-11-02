@@ -6,3 +6,4 @@ Set your Database url <br>
 > /config.js
 ## Run
 > npm start
+## Nodejs,mongodb,expressjs,reactjs,Text to speech APIs
